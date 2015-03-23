@@ -32,7 +32,7 @@ module ChatApp
 
     post '/message' do
       if(params[:message])
-        Messages.create(:poster => session[:Fullname], :text => params[:message])
+        Messages.create(:poster => session[:FullName], :text => params[:message])
       end
       redirect to('/hello/'+session[:FullName].gsub(' ','%20'))
     end
