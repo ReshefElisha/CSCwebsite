@@ -2,6 +2,8 @@ require 'sinatra'
 require 'slim'
 require 'data_mapper'
 
+
+
 require './model'
 
 module ChatApp

@@ -5,7 +5,7 @@ DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/developm
 
 class Messages
   include DataMapper::Resource
-  property :id          Serial
+  property :id,         Serial
   property :poster,     String
   property :text,       String
 end
