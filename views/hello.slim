@@ -1,0 +1,8 @@
+h2 Hello #{FullName}
+
+form(action=url('/message') method='post')
+  input(name='message' type='text')
+  button(type='submit') say something!
+
+javascript:
+  setInterval(page_refresh, 10000);
