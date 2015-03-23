@@ -1,6 +1,6 @@
 h2 Hello #{FullName}
 
-table
+table(onload="JavaScript:AutoRefresh(5000);")
   - for message in Messages
     tr
       td = message.poster
@@ -12,4 +12,6 @@ form(action=url('/message') method='post')
   button(type='submit') say something
 
 javascript:
-  setInterval(page_refresh, 10000);
+  function AutoRefresh( t ) {
+    setTimeout("location.reload(true);", t);
+  }
