@@ -1,5 +1,12 @@
 h2 Hello #{FullName}
 
+table
+  - for message in Messages
+    tr
+      td = message.poster
+      td = message.text
+    
+
 form(action=url('/message') method='post')
   input(name='message' type='text')
   button(type='submit') say something
