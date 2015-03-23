@@ -18,6 +18,7 @@ module ChatApp
 
     post '/signup' do
       if(params[:FullName])
+        session[:FullName] = params[:FullName]
         redirect to('/hello/'+params[:FullName].gsub(' ','%20'))
       else
         redirect to('/')
@@ -26,7 +27,6 @@ module ChatApp
 
     get '/hello/:FullName' do
       FullName = params[:FullName]
-      session[:FullName]
       slim :hello
     end
 
